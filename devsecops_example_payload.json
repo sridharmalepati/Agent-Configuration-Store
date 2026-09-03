@@ -1,0 +1,18 @@
+{
+  "app_id": 1,
+  "git_repository_url": "https://github.com/example/acme-service",
+  "github_token": "ghp_example_token",
+  "ci_runner": "GitHub Actions",
+  "pr_branch": "main",
+  "code_coverage_tool": "Codecov",
+  "code_coverage_org": "acme",
+  "code_coverage_token": "codecov_token",
+  "sast_tool": "SonarQube",
+  "sca_tool": "Snyk",
+  "dast_tool": "OWASP ZAP",
+  "container_image_scan_tool": "Trivy",
+  "artifact_repository": "JFrog Artifactory",
+  "container_registry": "ghcr.io",
+  "container_registry_owner": "acme",
+  "container_registry_pat": "ghcr_pat"
+}

@@ -1,0 +1,115 @@
+{
+  "info": {
+    "name": "DevSecOps API",
+    "description": "Sample Postman collection for the DevSecOps CRUD endpoints.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create DevSecOps",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"app_id\": 1,\n  \"git_repository_url\": \"https://github.com/example/acme-service\",\n  \"github_token\": \"ghp_example_token\",\n  \"ci_runner\": \"GitHub Actions\",\n  \"pr_branch\": \"main\",\n  \"code_coverage_tool\": \"Codecov\",\n  \"code_coverage_org\": \"acme\",\n  \"code_coverage_token\": \"codecov_token\",\n  \"sast_tool\": \"SonarQube\",\n  \"sca_tool\": \"Snyk\",\n  \"dast_tool\": \"OWASP ZAP\",\n  \"container_image_scan_tool\": \"Trivy\",\n  \"artifact_repository\": \"JFrog Artifactory\",\n  \"container_registry\": \"ghcr.io\",\n  \"container_registry_owner\": \"acme\",\n  \"container_registry_pat\": \"ghcr_pat\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8090/devsecops",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8090",
+          "path": [
+            "devsecops"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get DevSecOps",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8090/devsecops?app_id=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8090",
+          "path": [
+            "devsecops"
+          ],
+          "query": [
+            {
+              "key": "app_id",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update DevSecOps",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"ci_runner\": \"Azure Pipelines\",\n  \"dast_tool\": \"Aqua\",\n  \"sast_tool\": \"SonarCloud\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8090/devsecops?app_id=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8090",
+          "path": [
+            "devsecops"
+          ],
+          "query": [
+            {
+              "key": "app_id",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete DevSecOps",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8090/devsecops?app_id=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8090",
+          "path": [
+            "devsecops"
+          ],
+          "query": [
+            {
+              "key": "app_id",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
